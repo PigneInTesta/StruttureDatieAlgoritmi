@@ -1,0 +1,4 @@
+﻿  moltiplica.c
+D:\2022-2023_2°semestre\Strutture dati e algoritmi\Laboratorio\20230303 - Esercitazione\Es2\moltiplica.c(8,19): warning C4129: '*': unrecognized character escape sequence
+D:\2022-2023_2°semestre\Strutture dati e algoritmi\Laboratorio\20230303 - Esercitazione\Es2\moltiplica.c(12,20): warning C4013: 'atoi' undefined; assuming extern returning int
+  Es2.vcxproj -> D:\2022-2023_2°semestre\Strutture dati e algoritmi\Laboratorio\20230303 - Esercitazione\Es2\Debug\Es2.exe

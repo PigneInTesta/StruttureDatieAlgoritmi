@@ -1,0 +1,4 @@
+﻿  inverti_array.c
+D:\2022-2023_2°semestre\Strutture dati e algoritmi\Laboratorio\Esercizi Algoritmi in Linguaggio C\2.2.10 - inverti_array\inverti_array.c(13,56): warning C4098: 'InvertiArrayRec': 'void' function returning a value
+D:\2022-2023_2°semestre\Strutture dati e algoritmi\Laboratorio\Esercizi Algoritmi in Linguaggio C\2.2.10 - inverti_array\inverti_array.c(17,48): warning C4098: 'InvertiArray': 'void' function returning a value
+  2.2.10 - inverti_array.vcxproj -> D:\2022-2023_2°semestre\Strutture dati e algoritmi\Laboratorio\Esercizi Algoritmi in Linguaggio C\2.2.10 - inverti_array\Debug\2.2.10 - inverti_array.exe

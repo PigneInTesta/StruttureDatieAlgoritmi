@@ -1,0 +1,4 @@
+﻿  occorrenze.c
+D:\2022-2023_2°semestre\Strutture dati e algoritmi\Laboratorio\20230303 - Esercitazione\Es1\occorrenze.c(9,96): warning C4474: 'fprintf' : too many arguments passed for format string
+D:\2022-2023_2°semestre\Strutture dati e algoritmi\Laboratorio\20230303 - Esercitazione\Es1\occorrenze.c(9,96): message : placeholders and their parameters expect 1 variadic arguments, but 2 were provided
+  Es1.vcxproj -> D:\2022-2023_2°semestre\Strutture dati e algoritmi\Laboratorio\20230303 - Esercitazione\Es1\Debug\Es1.exe
