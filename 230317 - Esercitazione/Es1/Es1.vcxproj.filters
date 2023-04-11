@@ -18,8 +18,5 @@
     <ClCompile Include="ombrelloni.c">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="ombrelloni_ese.c">
-      <Filter>Source Files</Filter>
-    </ClCompile>
   </ItemGroup>
 </Project>
