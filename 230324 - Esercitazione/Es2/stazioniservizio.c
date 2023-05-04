@@ -8,7 +8,7 @@
 
 typedef struct {
 	double costo;		//ammontare della spesa
-	int stazioni[];		// lista delle fermate
+	int *stazioni;		// lista delle fermate
 } piano;
 
 void StazioniServizioRec(double m, const double* d, const double* p, size_t n, piano curr, piano *best, int i, double distcurr, double PercorsoDaUltimoRifornimento) {
@@ -41,13 +41,11 @@ void StazioniServizioRec(double m, const double* d, const double* p, size_t n, p
 
 void StazioniServizio(double m, const double* d, const double* p, size_t n) {
 
-	piano curr, best;
-	for (size_t i = 0; i < n; i++) {
-		curr.stazioni[i] = 0;
-		best.stazioni[i] = 0;
-	}
-	curr.costo = 0;
-	best.costo = DOUBLE_MAX;
+	piano curr = { .costo = 0, .stazioni = NULL };
+	piano best = { .costo = DOUBLE_MAX, .stazioni = NULL };
+
+	curr.stazioni = calloc(n, sizeof(int));
+	best.stazioni = calloc(n, sizeof(int));
 
 	StazioniServizioRec(m, d, p, n, curr, &best, 0, 0, 0);
 
@@ -58,11 +56,14 @@ void StazioniServizio(double m, const double* d, const double* p, size_t n) {
 			if (best.stazioni[i] == 1) {
 				printf("%d ", i);
 			}
-			printf("\nSpesa totale: %f euro", best.costo);
 		}
+		printf("\nSpesa totale: %f euro", best.costo);
 	}
-}
 
+	free(curr.stazioni);
+	free(best.stazioni);
+}
+/*
 int main() {
 
 	double* dist = malloc(5 * sizeof(double));
@@ -75,3 +76,4 @@ int main() {
 	
 	StazioniServizio(1540, dist, prezzi, 5);
 }
+*/

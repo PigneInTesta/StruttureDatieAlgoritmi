@@ -10,37 +10,38 @@ static bool IsInVcurr(int* vcurr, int j, int size) {
 }
 
 static void TorreCartoniRec(const Cartone* c, size_t n, size_t i, int* vcurr, int* vbest, unsigned sum, unsigned hcurr, unsigned *hbest, int *max) {
-
-	if (i == n) {
-		for (size_t j = 0; j < n; j++) {		// questo ciclo va fuori dalla soluzione
-			sum += c[vcurr[j]].p;				//
-			hcurr += c[vcurr[j]].a;				//
-			if (c[vcurr[j + 1]].l < sum) {		//
-				for (size_t k = 0; k < j; k++) {				//usare memcpy anzichè il ciclo for
-					(*max)++;
-					if (hcurr > (*hbest) || (*hbest) == 0) {	//non ci va il >= perchè sarebbe già una soluzione migliore
-						(*hbest) = hcurr;
-						vbest[k] = vcurr[k];					
-					}
+	
+	for (size_t j = 0; j < n; j++) {
+		if (c[vcurr[j + 1]].l <= sum) {
+			for (size_t k = 0; k < j; k++) {				//usare memcpy anzichè il ciclo for
+				(*max)++;
+				if (hcurr > (*hbest) || (*hbest) == 0) {	//non ci va il >= perchè sarebbe già una soluzione migliore
+					(*hbest) = hcurr;
+					vbest[k] = vcurr[k];
 				}
-				sum = 0;
-				hcurr = 0;
-				break;
 			}
-			
+		} else {
+			sum = 0;
+			hcurr = 0;
 		}
+	}
+
+	for (size_t k = 0; k < n; k++) {		
+		sum += c[vcurr[k]].p;				
+		hcurr += c[vcurr[k]].a;				
+	}
+	
+	if (i == n) {
 		return;
 	}
 
-
-	for (size_t j = 0; j < n; j++) {
-		if (!IsInVcurr(vcurr, j, i)) {
-			vcurr[i] = j;
+	for (size_t w = 0; w < n; w++) {
+		if (!IsInVcurr(vcurr, w, i)) {
+			vcurr[i] = w;
 			TorreCartoniRec(c, n, i + 1, vcurr, vbest, sum, hcurr, hbest, max);
 		}
 	}
 }
-
 
 void TorreCartoni(const Cartone* c, size_t n) {
 
