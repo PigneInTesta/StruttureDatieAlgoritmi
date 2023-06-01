@@ -15,7 +15,7 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="subset.c">
+    <ClCompile Include="ombrelloni.c">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>

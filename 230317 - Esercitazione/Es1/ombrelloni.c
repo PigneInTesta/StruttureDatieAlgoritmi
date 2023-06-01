@@ -2,37 +2,32 @@
 #include <stdio.h>
 #include <stdbool.h>
 
-static void OmbrelloniRec(int k, int n, bool* vcurr, int i, int* nsol, int cnt) {
-
-	if (i == n) {
-		cnt = vcurr[0];
-		for (int j = 1; j < n; j++) {
-			if (vcurr[j]) {							// == 1 si può omettere
-				cnt++;
-			}
-
-			if (vcurr[j] == 1 && vcurr[j - 1] == 1) {		// == 1 si può omettere
-				return;
-			}
+void OmbrelloniRec(int k, int n, bool *vcurr, int i, int *nsol, int cnt) {
+	
+	if (cnt == k) {
+		(*nsol)++;
+		printf("%4d) ", *nsol);
+		for (int j = 0; j < n; ++j) {
+			printf("%d ", vcurr[j]);
 		}
-
-		if (cnt == k) {
-			(*nsol)++;
-			printf("%4d) ", *nsol);
-			for (int j = 0; j < n; ++j) {
-				printf("%d ", vcurr[j]);
-			}
-			puts("");
-		}
-
+		puts("");
 		return;
 	}
 
-	vcurr[i] = 0;
+	if (i == n) {
+		return;
+	}
+
+	vcurr[i] = false;
 	OmbrelloniRec(k, n, vcurr, i + 1, nsol, cnt);
 
-	vcurr[i] = 1;
-	OmbrelloniRec(k, n, vcurr, i + 1, nsol, cnt);
+	if ((!vcurr[i - 1] && !vcurr[i]) || i == 0) {
+		vcurr[i] = true;
+		OmbrelloniRec(k, n, vcurr, i + 1, nsol, cnt + 1);
+	}
+	
+	vcurr[i] = false;
+	cnt = 0;
 }
 
 int Ombrelloni(int k, int n) {
@@ -50,12 +45,9 @@ int Ombrelloni(int k, int n) {
 	return nsol;
 }
 
-/*
-int main(void) {
-
-	int nsol = Ombrelloni(2, 4);
-	nsol = Ombrelloni(4, 4);
-	return 0;
- }
- */
- 
+//int main(void) {
+//
+//	int nsol = Ombrelloni(2, 4);
+//	nsol = Ombrelloni(4, 4);
+//	return 0;
+// }
