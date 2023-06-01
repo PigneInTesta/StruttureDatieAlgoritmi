@@ -4,23 +4,31 @@
 
 void HeapMinHeapsort(Heap* h) {
 
-	ElemType* max = malloc(sizeof(ElemType));
-	int max_pos;
-	
-	for (size_t i = 0; i < h->size; i++) {
-		for (size_t j = i; j < h->size; j++) {
-			if (ElemCompare(&h->data[j], max) > 0) {
-				*max = h->data[j];
-				max_pos = j;
-			}
-		}
-		ElemSwap(&h->data[max_pos], &h->data[i]);
-		*max = INT_MIN;
+	//ElemType* max = malloc(sizeof(ElemType));
+	//int max_pos;
+	//
+	//for (size_t i = 0; i < h->size; i++) {
+	//	for (size_t j = i; j < h->size; j++) {
+	//		if (ElemCompare(&h->data[j], max) > 0) {
+	//			*max = h->data[j];
+	//			max_pos = j;
+	//		}
+	//	}
+	//	ElemSwap(&h->data[max_pos], &h->data[i]);
+	//	*max = INT_MIN;
+	//}
+
+	//free(max);
+	int size = h->size;
+	while (h->size > 0) {
+		h->size--;
+		ElemSwap(h->data, h->data + h->size);
+		HeapMinMoveDown(h, 0);
 	}
+	h->size = size;
 
-	free(max);
 }
-
+/*
 int main(void) {
 
 	Heap* example_a = HeapCreateEmpty();
@@ -31,7 +39,7 @@ int main(void) {
 	}
 
 	Heap* example_b = HeapCreateEmpty();
-	ElemType b[] = {0, 4, 3, 2};
+	ElemType b[] = {0, 2, 3, 4};
 	size_t dim_b = sizeof(b) / sizeof(ElemType);
 	for (size_t i = 0; i < dim_b; i++) {
 		HeapMinInsertNode(example_b, &b[i]);
@@ -39,4 +47,4 @@ int main(void) {
 
 	HeapMinHeapsort(example_a);
 	HeapMinHeapsort(example_b);
-}
+}*/
