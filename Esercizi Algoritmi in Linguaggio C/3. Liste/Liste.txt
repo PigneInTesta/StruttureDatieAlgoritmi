@@ -6,3 +6,4 @@
 4.3.6 - split		OK
 4.3.7 - concatena	OK
 4.3.8 - concatena_n	OK
+4.3.9 - filter		OK
