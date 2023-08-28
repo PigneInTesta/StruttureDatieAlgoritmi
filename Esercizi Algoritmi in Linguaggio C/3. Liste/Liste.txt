@@ -2,3 +2,5 @@
 4.3.2 - occorrenze	OK
 4.3.3 - coords_load	OK
 4.3.4 - vector_list	OK
+4.3.5 - taglia		OK
+4.3.6 - split		OK
