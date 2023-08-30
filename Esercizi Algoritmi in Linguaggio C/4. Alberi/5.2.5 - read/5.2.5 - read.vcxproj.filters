@@ -15,21 +15,21 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="height.c">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="elemtype.c">
+    <ClCompile Include="read.c">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="tree.c">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="elemtype.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="tree.h">
+    <ClInclude Include="elemtype.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="elemtype.h">
+    <ClInclude Include="tree.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
