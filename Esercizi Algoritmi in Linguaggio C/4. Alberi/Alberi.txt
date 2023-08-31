@@ -3,3 +3,7 @@
 5.2.3 - compare		OK
 5.2.4 - height		OK
 5.2.5 - read		OK
+5.2.6 - write		OK
+5.2.7 - vector2bst	OK
+5.2.8 - tree2bst	OK	
+5.2.9 - avl		OK
