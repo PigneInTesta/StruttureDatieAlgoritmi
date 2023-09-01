@@ -15,21 +15,21 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="minheap.c">
+    <ClCompile Include="kth_least.c">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="elemtype.c">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="heapsort.c">
+    <ClCompile Include="minheap.c">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="minheap.h">
+    <ClInclude Include="elemtype.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="elemtype.h">
+    <ClInclude Include="minheap.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

@@ -21,8 +21,8 @@
   <PropertyGroup Label="Globals">
     <VCProjectVersion>16.0</VCProjectVersion>
     <Keyword>Win32Proj</Keyword>
-    <ProjectGuid>{79926a2a-be0a-460b-95c8-40c65e4288b8}</ProjectGuid>
-    <RootNamespace>My626heapsort</RootNamespace>
+    <ProjectGuid>{c890f1c4-b8aa-4b75-a377-fb55500b1bd3}</ProjectGuid>
+    <RootNamespace>My627kthleast</RootNamespace>
     <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
@@ -140,7 +140,7 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="elemtype.c" />
-    <ClCompile Include="heapsort.c" />
+    <ClCompile Include="kth_least.c" />
     <ClCompile Include="minheap.c" />
   </ItemGroup>
   <ItemGroup>
