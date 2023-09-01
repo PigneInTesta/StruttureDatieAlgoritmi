@@ -1,2 +1,3 @@
 6.2.1 - heapify		OK
 6.2.2 - remove		OK
+6.2.3 - copy		OK
