@@ -5,3 +5,5 @@
 6.2.5 - get_pop		OK
 6.2.6 - heapsort	OK
 6.2.7 - kth_least	OK	indirizzo si o no?
+6.2.8 - merge		OK
+6.2.9 - min2max		OK
