@@ -2,3 +2,4 @@
 6.2.2 - remove		OK
 6.2.3 - copy		OK
 6.2.4 - is_heap		OK
+6.2.5 - get_pop		OK
